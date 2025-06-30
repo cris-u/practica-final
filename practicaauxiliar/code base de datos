@@ -1,0 +1,20 @@
+CREATE DATABASE IF NOT EXISTS asistencias_db;
+USE asistencias_db;
+
+CREATE TABLE asistencias (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  estudiante VARCHAR(255) NOT NULL,
+  hora TIME NULL,
+  fecha DATE NOT NULL,
+  estado ENUM('PRESENTE', 'AUSENTE', 'TARDE', 'JUSTIFICADO') NOT NULL DEFAULT 'PRESENTE',
+  observaciones TEXT NULL
+);
+
+-- Insertar datos de ejemplo para que la tabla no esté vacía
+INSERT INTO `asistencias` (`id`, `estudiante`, `hora`, `fecha`, `estado`, `observaciones`) VALUES
+(1, 'Ana María González', '08:15:00', '2024-01-15', 'PRESENTE', 'Llegó puntual'),
+(2, 'Carlos Eduardo Pérez', '08:25:00', '2024-01-15', 'TARDE', 'Llegó 10 minutos tarde'),
+(3, 'María José Rodríguez', NULL, '2024-01-15', 'AUSENTE', 'No se presentó a clase'),
+(4, 'Luis Fernando Martínez', '09:00:00', '2024-01-15', 'JUSTIFICADO', 'Cita médica - Presentó justificante'),
+(5, 'Isabella Sofía López', '08:10:00', '2024-01-15', 'PRESENTE', 'Participación activa en clase'),
+(6, 'Diego Alejandro Vargas', '08:30:00', '2024-01-15', 'TARDE', 'Problemas de transporte');
