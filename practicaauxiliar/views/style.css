@@ -1,0 +1,177 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* --- Cabecera --- */
+.header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #495057;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+/* --- Botones --- */
+.btn {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #270eb4; /* Verde */
+}
+
+.btn-primary:hover {
+    background-color: #6e0531;
+}
+
+.btn-edit {
+    background-color: #f39e20; /* Azul */
+    padding: 5px 10px;
+}
+
+.btn-edit:hover {
+    background-color: #be1a88;
+}
+
+.btn-delete {
+    background-color: #ca1628; /* Rojo */
+    padding: 5px 10px;
+}
+
+.btn-delete:hover {
+    background-color: #8a17cc;
+}
+
+/* --- Tabla de Asistencias --- */
+.table-container {
+    padding: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+thead th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+td.actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* --- Insignias de Estado (Badges) --- */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 0.8em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 10rem; /* Forma de píldora */
+    color: #fff;
+}
+
+.badge-presente { background-color: #1d11c0; } /* azul */
+.badge-tarde { background-color: #14cf24; color: #212529; } /* verde */
+.badge-ausente { background-color: #bbe407; } /* amarilloi*/
+.badge-justificado { background-color: #6b0715; } /* Cafe */
+
+/* --- Pie de Página --- */
+.footer {
+    padding: 15px 25px;
+    background-color: #f8f9fa;
+    color: #6c757d;
+    font-size: 0.85em;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #dee2e6;
+}
+
+/* --- Estilos para el Formulario --- */
+.form-container {
+    padding: 30px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #495057;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box; /* Importante para que el padding no afecte el ancho */
+    font-size: 1em;
+}
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+.form-actions {
+    text-align: right;
+    margin-top: 20px;
+}
+.btn-submit {
+    background-color: #007bff;
+    font-size: 1em;
+    padding: 12px 25px;
+}
+.btn-submit:hover {
+    background-color: #17f329;
+}
